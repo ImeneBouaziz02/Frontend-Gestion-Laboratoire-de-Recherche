@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>
+  {{ data ? 'Modifier Outil' : 'Ajouter Outil' }}
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form">
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error>Date obligatoire</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Source</mat-label>
+      <input matInput formControlName="source">
+      <mat-error>Source obligatoire</mat-error>
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Annuler</button>
+  <button mat-raised-button color="primary" (click)="save()" [disabled]="form.invalid">
+    Enregistrer
+  </button>
+</mat-dialog-actions>

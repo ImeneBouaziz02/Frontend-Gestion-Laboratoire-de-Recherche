@@ -1,0 +1,54 @@
+
+<div class="dashboard-container">
+
+  <!-- ====== CARDS ====== -->
+  <div class="cards">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Members</mat-card-title>
+        <mat-card-subtitle>{{ nb_Members }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Articles</mat-card-title>
+        <mat-card-subtitle>{{ nb_Articles }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Events</mat-card-title>
+        <mat-card-subtitle>{{ nb_Events }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Tools</mat-card-title>
+        <mat-card-subtitle>{{ nb_Tools }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </div>
+
+  <!-- ====== CHARTS ====== -->
+  <div class="chart-wrapper">
+    <canvas baseChart
+      [type]="'line'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions">
+    </canvas>
+  </div>
+
+  <div class="chart-wrapper">
+    <canvas baseChart
+      [type]="'pie'"
+      [datasets]="chartData1"
+      [labels]="chartLabels1"
+      [options]="chartOptions">
+    </canvas>
+  </div>
+
+</div>

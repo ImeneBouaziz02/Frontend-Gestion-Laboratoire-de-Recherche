@@ -1,0 +1,49 @@
+{
+  "members": [
+    {
+      "id": "1",
+      "cin": "12345678",
+      "name": "Ahmed Ben Ali",
+      "type": "student",
+      "createDate": "2024-01-15"
+    },
+    {
+      "id": "2",
+      "cin": "87654321",
+      "name": "Fatma Trabelsi",
+      "type": "teacher",
+      "createDate": "2023-09-01"
+    }
+  ],
+  "publications": [
+    {
+      "id": "1",
+      "type": "article",
+      "titre": "Deep Learning Applications",
+      "lien": "http://example.com",
+      "date": "2024-03-15",
+      "sourcepdf": "https://www.google.com/"
+    }
+  ],
+  "evenement": [
+    {
+      "id": "1",
+      "titre": "Conference IA 2024",
+      "date": "2024-06-15",
+      "lieu": "Tunis"
+    },
+    {
+      "id": "2",
+      "titre": "Workshop Machine Learning",
+      "date": "2024-07-20",
+      "lieu": "Sfax"
+    }
+  ],
+  "outils": [
+    {
+      "date": "2024-01-10T23:00:00.000Z",
+      "source": "https://github.com/lab/tool2",
+      "id": "1"
+    }
+  ]
+}

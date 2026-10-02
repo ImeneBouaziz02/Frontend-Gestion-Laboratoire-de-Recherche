@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* styles.css */
+.custom-dialog .mat-dialog-container {
+  border-radius: 12px;
+  padding: 20px 24px;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  font-family: "Roboto", sans-serif;
+}
+
+.custom-dialog .mat-dialog-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.custom-dialog .mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.custom-dialog .confirm-btn {
+  background: #e53935;
+  color: #fff;
+  border-radius: 8px;
+}

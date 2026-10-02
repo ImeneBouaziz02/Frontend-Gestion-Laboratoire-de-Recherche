@@ -1,0 +1,60 @@
+/* styles.css (or global stylesheet) */
+.custom-dialog .mat-dialog-container {
+  border-radius: 12px;
+  padding: 20px 24px;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Title */
+.custom-dialog .mat-dialog-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Content */
+.custom-dialog .mat-dialog-content {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.45;
+  padding: 0; /* container padding already set */
+  margin-bottom: 12px;
+}
+
+/* Actions row */
+.custom-dialog .mat-dialog-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 12px;
+}
+
+/* Cancel button (neutral) */
+.custom-dialog .mat-dialog-actions button.mat-button {
+  min-width: 92px;
+  border-radius: 8px;
+}
+
+/* Confirm button (accent/danger style) */
+.custom-dialog .mat-dialog-actions button.confirm-btn {
+  min-width: 92px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #e53935 0%, #d32f2f 100%);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(213, 32, 32, 0.25);
+}
+
+/* Hover and focus states for accessibility */
+.custom-dialog .mat-dialog-actions button.confirm-btn:hover,
+.custom-dialog .mat-dialog-actions button.confirm-btn:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(213, 32, 32, 0.32);
+}
+
+/* Responsive tweak for version mobile */

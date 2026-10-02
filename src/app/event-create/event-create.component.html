@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>
+  {{ isEditMode ? 'Modifier l\'événement' : 'Créer un nouvel événement' }}
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form">
+    
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Titre</mat-label>
+      <input matInput placeholder="Titre de l'événement" formControlName="titre" required>
+      <mat-error *ngIf="form.get('titre')?.hasError('required')">
+        Le titre est obligatoire
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Date</mat-label>
+      <input
+    matInput
+    [matDatepicker]="picker"
+    formControlName="date"
+    placeholder="jj/mm/aaaa"
+    required
+  >
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+
+  <mat-error *ngIf="form.get('date')?.hasError('required')">
+    La date est obligatoire
+  </mat-error>
+</mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Lieu</mat-label>
+      <input matInput placeholder="Lieu de l'événement" formControlName="lieu" required>
+      <mat-error *ngIf="form.get('lieu')?.hasError('required')">
+        Le lieu est obligatoire
+      </mat-error>
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Annuler</button>
+  <button mat-raised-button color="primary" (click)="save()" [disabled]="!form.valid">
+    {{ isEditMode ? 'Modifier' : 'Créer' }}
+  </button>
+</mat-dialog-actions>
